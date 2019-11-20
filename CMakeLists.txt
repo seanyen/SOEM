@@ -84,6 +84,9 @@ target_include_directories(soem
   $<INSTALL_INTERFACE:include/soem>
   )
 
+target_link_directories(soem
+  PUBLIC $<INSTALL_INTERFACE:lib>)
+
 message("LIB_DIR: ${SOEM_LIB_INSTALL_DIR}")
 
 install(TARGETS soem EXPORT soemConfig DESTINATION ${SOEM_LIB_INSTALL_DIR})
@@ -96,8 +99,14 @@ install(FILES
   ${OSHW_HEADERS}
   DESTINATION ${SOEM_INCLUDE_INSTALL_DIR})
 
+file(GLOB PCAP_LIBS oshw/${OS}/wpcap/Lib/x64/*.lib)
+
+install(FILES
+  ${PCAP_LIBS}
+  DESTINATION ${SOEM_LIB_INSTALL_DIR})
+
 install(DIRECTORY
-  oshw/${OS}/wpcap/include
+  oshw/${OS}/wpcap/include/
   DESTINATION ${SOEM_INCLUDE_INSTALL_DIR})
 
 if(BUILD_TESTS) 
