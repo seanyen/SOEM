@@ -18,8 +18,8 @@ extern "C"
 
 #define HAVE_REMOTE
 
-#include <pcap.h>
-#include <Packet32.h>
+#include "pcap.h"
+#include "Packet32.h"
 
 /** pointer structure to Tx and Rx stacks */
 typedef struct

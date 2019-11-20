@@ -4,6 +4,7 @@
  */
 
 #include "oshw.h"
+#include <malloc.h>
 
 /**
  * Host to Network byte order (i.e. to big endian).

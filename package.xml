@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <name>soem</name>
+  <version>1.4.0</version>
+  <description>
+    ROS wrapper for the Simple Open EtherCAT Master SOEM.
+    This is an updated version of the original SOEM wrapper released into ROS now including
+    the upstream Repo as a git subtree.
+  </description>
+
+  <maintainer email="matthias.gruhler@gmail.com">Matthias Gruhler</maintainer>
+
+  <license>GPLv2 with linking exception</license>
+
+  <url type="website">http://openethercatsociety.github.io/</url>
+  <url type="website">http://wiki.ros.org/soem</url>
+  <url type="bugtracker">https://github.com/mgruhler/soem/issues</url>
+
+  <author>Arthur Ketels and M.J.G. van den Molengraft</author>
+
+  <buildtool_depend>cmake</buildtool_depend>
+
+  <run_depend>catkin</run_depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>

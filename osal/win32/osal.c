@@ -4,6 +4,8 @@
  */
 
 #include <winsock2.h>
+#include <timeapi.h>
+#include <malloc.h>
 #include <osal.h>
 #include "osal_win32.h"
 
